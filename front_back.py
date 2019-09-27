@@ -4,6 +4,7 @@ def front_back(str):
     else:
         return str
 
+
 print(front_back("code"))
 print(front_back("ab"))
 print(front_back("a"))
