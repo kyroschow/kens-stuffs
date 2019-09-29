@@ -13,10 +13,7 @@ def print_board(board):
 
 for step in range(steps):
     print_board(board)
-    if step % 2 == 0:
-        location = int(input("x: ")) - 1
-        board[int(location / rowSize)][location % rowSize] = "x"
-    else:
-        location = int(input("o: ")) - 1
-        board[int(location / rowSize)][location % rowSize] = "o"
+    character = "x" if step % 2 == 0 else "o"
+    location = int(input(f"{character}: ")) - 1
+    board[int(location / rowSize)][location % rowSize] = character
 print_board(board)

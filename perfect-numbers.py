@@ -8,6 +8,5 @@ m, n = input("m n: ").split()
 
 for num in range(int(m), int(n) + 1):
     factors = get_factors(num)
-    sumOfFactors = sum(factors)
-    if sumOfFactors == num:
+    if sum(factors) == num:
         print(num, end=" ")
