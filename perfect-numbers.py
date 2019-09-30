@@ -4,9 +4,13 @@ def get_factors(num):
             yield i
 
 
-m, n = input("m n: ").split()
+def get_perfect_numbers(m, n):
+    for num in range(m, n + 1):
+        factors = get_factors(num)
+        if sum(factors) == num:
+            yield num
 
-for num in range(int(m), int(n) + 1):
-    factors = get_factors(num)
-    if sum(factors) == num:
-        print(num, end=" ")
+
+m, n = input("m n: ").split()
+perfectNumbers = get_perfect_numbers(int(m), int(n))
+print(*perfectNumbers)
